@@ -1,0 +1,124 @@
+.form_item {
+  border: none;
+}
+.form_item .table {
+  width: 100%;
+  margin: 0 auto;
+}
+.form_item .table .tr {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1000px) {
+  .form_item .table .tr {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.form_item .table .tr .container_image {
+  width: 35%;
+}
+@media (max-width: 1000px) {
+  .form_item .table .tr .container_image {
+    width: 50%;
+  }
+}
+.form_item .table .tr .container_image .imagen {
+  width: 100%;
+  height: auto;
+}
+.form_item .table .tr .container_textos {
+  width: 65%;
+  height: auto;
+  padding: 1rem;
+}
+@media (max-width: 1000px) {
+  .form_item .table .tr .container_textos {
+    width: 80%;
+  }
+}
+.form_item .table .tr .container_textos .pTitulo {
+  font-size: 2.1rem;
+}
+.form_item .table .tr .container_textos .pDescripcion {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+.form_item .table .tr .container_textos .submitValue {
+  width: 50%;
+  height: 5rem;
+  background-color: rgb(5, 87, 163);
+  margin: 2rem auto;
+  border: none;
+  font-size: 2.3rem;
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  transition: all 2s;
+  -webkit-box-shadow: 0px 8px 20px -7px rgb(17, 18, 18);
+  -moz-box-shadow: 0px 8px 20px -7px rgb(17, 18, 18);
+  box-shadow: 0px 8px 20px -7px rgb(17, 18, 18);
+}
+.form_item .table .tr .container_textos .submitValue:hover {
+  background-color: rgb(6, 60, 110);
+}
+@media (max-width: 1000px) {
+  .form_item .table .tr .container_textos .submitValue {
+    width: 100%;
+    margin: 3rem auto;
+  }
+}
+
+.container_lead {
+  width: 31%;
+  height: auto;
+  background-color: rgb(61, 54, 61);
+  margin: 2rem;
+  border-radius: 0.5rem;
+}
+@media (max-width: 1000px) {
+  .container_lead {
+    width: 60%;
+    margin: 4rem auto;
+  }
+}
+.container_lead .p_lead {
+  color: #fff;
+  text-align: center;
+  padding: 0.7rem;
+}
+.container_lead .lead {
+  display: flex;
+  flex-direction: column;
+}
+.container_lead .lead .input_nombre, .container_lead .lead .input_email, .container_lead .lead .input_submit {
+  height: 4rem;
+  font-size: 1.7rem;
+  padding-left: 1rem;
+}
+.container_lead .lead .input_submit {
+  background-color: #ec0b43;
+  font-size: 1.9rem;
+  border: none;
+  color: #fff;
+  transition: all 2s;
+  -webkit-box-shadow: 0px 8px 20px -7px rgb(17, 18, 18);
+  -moz-box-shadow: 0px 8px 20px -7px rgb(17, 18, 18);
+  box-shadow: 0px 8px 20px -7px rgb(17, 18, 18);
+}
+.container_lead .lead .input_submit:hover {
+  background-color: #a7052e;
+}
+.container_lead .msgInput_lead {
+  background-color: #fff;
+  height: auto;
+  font-size: 1.6rem;
+  text-align: center;
+  color: red;
+  padding-top: 2rem;
+}
