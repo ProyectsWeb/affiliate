@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({data, id}) {
 
+    console.log(data)
   const router = useRouter();
 
   return (
@@ -34,7 +35,7 @@ export default function Home({data, id}) {
 
   const res = await fetch(`${process.env.HOST_URL}/api/afilis/?id=${id}`)
   const data = await res.json(); 
-
+  
    return {
     props: {data }
   }
