@@ -21,7 +21,7 @@
 }
 @media (max-width: 1000px) {
   .form_item .table .tr .container_image {
-    width: 50%;
+    width: 80%;
   }
 }
 .form_item .table .tr .container_image .imagen {
@@ -35,7 +35,7 @@
 }
 @media (max-width: 1000px) {
   .form_item .table .tr .container_textos {
-    width: 80%;
+    width: 95%;
   }
 }
 .form_item .table .tr .container_textos .pTitulo {
@@ -83,7 +83,7 @@
 }
 @media (max-width: 1000px) {
   .container_lead {
-    width: 60%;
+    width: 90%;
     margin: 4rem auto;
   }
 }

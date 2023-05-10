@@ -35,7 +35,7 @@ export default function Home({data, id}) {
 
   const res = await fetch(`${process.env.HOST_URL}/api/afilis/?id=${id}`)
   const data = await res.json(); 
-  
+
    return {
     props: {data }
   }
