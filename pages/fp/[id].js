@@ -16,7 +16,7 @@ export default function Home({data, id}) {
   return (
     <>
       <Head>
-        <title>Recommended by ZAVAN</title>
+        <title>Zavan Recommendations</title>
         <meta name="keywords" content={`${myKeywords}`} />   
         <meta name="description" content={`${data[0].alt}`} />
         <meta name="author" content="Jorge Peraza - Zavanaf" />  
@@ -24,7 +24,7 @@ export default function Home({data, id}) {
         <meta property='og:image' content={`${data[0].imgSrc}` }/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className={styles.h1}>RECOMENDADO</h1>
+      <h1 className={styles.h1}>Recomendado</h1>
 
       <div className={styles.container}>
         {data.length >= 1 ? <Item data={data} /> : <Pag404 />}

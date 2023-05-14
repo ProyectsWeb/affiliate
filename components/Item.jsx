@@ -83,12 +83,12 @@ export const Item = ({data}) => {
    
     </form>   
        <div className={styles.container_lead}>
-        <p className={styles.p_lead}>¿Quieres recibir promociones exclusivas?</p>
+        <p className={styles.p_lead}>Registrate para recibir promociones exclusivas</p>
 
         <form className={styles.lead} onSubmit={handleSubmit} ref={form} >
           <input type="text" placeholder='Nombre' className={styles.input_nombre} name={nombre} onChange={(e)=>setNombre(e.target.value)} pattern='[\Da-zA-Z]{1,50}'/>                                                     
           <input type="email" placeholder='Correo' className={styles.input_email} name={email} onChange={introEmail} />                                              
-          <input type="submit" value="Si, Quiero" className={styles.input_submit}  />
+          <input type="submit" value="Quiero Registrarme" className={styles.input_submit}  />
         </form>
         {msgInput === false ? <p className={styles.msgInput_lead}>"Ingresa email completo sin caracteres extraños"</p> : ""}
        </div> 
