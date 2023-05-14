@@ -21,12 +21,7 @@ export default function Home({data, id}) {
         <meta name="description" content={`${data[0].alt}`} />
         <meta name="author" content="Jorge Peraza - Zavanaf" />  
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <meta property='og:title' content="Zavan Recommendations" />
-        <meta property='og:type' content="article" />
-        <meta property='og:description' content={`${data[0].alt}`} />
-        <meta property='og:url' content="https://zavanaf.vercel.app/" />
-        <meta property='og:site_name' content="ZAVAN" />
+        
         <meta property='og:image' content={`${data[0].imgSrc}` }/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
