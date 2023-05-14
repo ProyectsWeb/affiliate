@@ -20,9 +20,10 @@ export default function Home({data, id}) {
         <meta name="keywords" content={`${myKeywords}`} />   
         <meta name="description" content={`${data[0].alt}`} />
         <meta name="author" content="Jorge Peraza - Zavanaf" />  
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1" />        
         <meta property='og:image' content={`${data[0].imgSrc}` }/>
+
+        <meta property='og:description' content={`${data[0].alt}`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className={styles.h1}>Recomendado</h1>
