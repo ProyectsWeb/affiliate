@@ -61,9 +61,11 @@ export const Item = ({data}) => {
          priority        
          />
        </div>
-
-      <div className={styles.container_textos} >
+    
+      <div className={styles.container_textos} >     
        <p className={styles.pTitulo}><b>{data[0].pTitulo}</b></p>
+
+       <h3 className={styles.ventajas}>Ventajas y/o Beneficios:</h3>
        <p className={styles.pDescripcion}>{data[0].pDescripcion}</p>
      
        <input type="hidden" name="aff_key" value={data[0].aff_key} />
@@ -77,7 +79,7 @@ export const Item = ({data}) => {
        <input type="hidden" name="url" value={data[0].url} />
        <input type="submit" value={data[0].submitValue} className={styles.submitValue} />
       </div>
-
+      <p className={styles.descuento}>%</p>
     </div>
     </div>
    
@@ -88,7 +90,7 @@ export const Item = ({data}) => {
         <form className={styles.lead} onSubmit={handleSubmit} ref={form} >
           <input type="text" placeholder='Nombre' className={styles.input_nombre} name={nombre} onChange={(e)=>setNombre(e.target.value)} pattern='[\Da-zA-Z]{1,50}'/>                                                     
           <input type="email" placeholder='Correo' className={styles.input_email} name={email} onChange={introEmail} />                                              
-          <input type="submit" value="Quiero Registrarme" className={styles.input_submit}  />
+          <input type="submit" value="Registrarme" className={styles.input_submit}  />
         </form>
         {msgInput === false ? <p className={styles.msgInput_lead}>"Ingresa email completo sin caracteres extraños"</p> : ""}
        </div> 

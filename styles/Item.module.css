@@ -41,6 +41,9 @@
 .form_item .table .tr .container_textos .pTitulo {
   font-size: 2.1rem;
 }
+.form_item .table .tr .container_textos .ventajas {
+  margin-top: 3rem;
+}
 .form_item .table .tr .container_textos .pDescripcion {
   font-size: 1.7rem;
   line-height: 1.5;
@@ -49,7 +52,7 @@
 .form_item .table .tr .container_textos .submitValue {
   width: 50%;
   height: 5rem;
-  background-color: rgb(5, 87, 163);
+  background-color: #ec0b43;
   margin: 2rem auto;
   border: none;
   font-size: 2.3rem;
@@ -65,13 +68,23 @@
   box-shadow: 0px 8px 20px -7px rgb(17, 18, 18);
 }
 .form_item .table .tr .container_textos .submitValue:hover {
-  background-color: rgb(6, 60, 110);
+  background-color: #a7052e;
 }
 @media (max-width: 1000px) {
   .form_item .table .tr .container_textos .submitValue {
     width: 100%;
     margin: 3rem auto;
   }
+}
+.form_item .table .tr .descuento {
+  width: 10rem;
+  height: 11rem;
+  color: red;
+  font-size: 7rem;
+  text-align: center;
+  margin: 2rem;
+  border: 3px solid #ee0e19;
+  border-radius: 1rem;
 }
 
 .container_lead {
@@ -102,6 +115,7 @@
   padding-left: 1rem;
 }
 .container_lead .lead .input_submit {
+  width: auto;
   background-color: #ec0b43;
   font-size: 1.9rem;
   border: none;
