@@ -13,7 +13,8 @@ export default async function handler(req, res) {
     case 'POST':       
         console.log(req.body);
         const newProducto = new Producto(req.body);       
-        const productoGrabado = await newProducto.save();    
+        const productoGrabado = await newProducto.save();  
+        console.log(productoGrabado)  
     return res.status(201).json(productoGrabado);
       
       default:

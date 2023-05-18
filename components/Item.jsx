@@ -3,12 +3,15 @@ import Image from 'next/image'
 import styles from '@/styles/Item.module.css'
 import { userSave } from '@/js/userSave'
 
+
 export const Item = ({data}) => {
 
-    const form = useRef();
+    const form = useRef();   
     const [ nombre, setNombre]= useState('');
     const [ email, setEmail]= useState('');  
-    const [msgInput, setMsgInput] = useState(false);     
+    const [msgInput, setMsgInput] = useState(false); 
+    const beneficios = data[0].beneficios;
+    
 
   const introEmail = (e)=>{  
    setEmail(e.target.value)
@@ -52,21 +55,34 @@ export const Item = ({data}) => {
      <div className={styles.tr}>
 
        <div className={styles.container_image}>
-       
+               
         <Image src={data[0].imgSrc}
          width={300} 
          height={300}
          alt={data[0].alt} 
          className={styles.imagen}
          priority        
-         />
+         />        
        </div>
     
       <div className={styles.container_textos} >     
        <p className={styles.pTitulo}><b>{data[0].pTitulo}</b></p>
 
        <h3 className={styles.ventajas}>Ventajas y/o Beneficios:</h3>
-       <p className={styles.pDescripcion}>{data[0].pDescripcion}</p>
+      <ul>
+        {
+          beneficios.map((beneficio, index)=>{
+            return <li key={index} className={styles.list_beneficios}>
+                      <i class="fa-solid fa-check"></i>                    
+                      <span className={styles.span_titulo}>{beneficio.subtitulo}</span>
+                       <br></br>
+                      <span className={styles.span_descripcion}>{beneficio.descBeneficio}</span>                     
+                   </li>             
+          })
+        }
+      </ul>          
+
+      <p className={styles.pDescripcion}>{data[0].pDescripcion}</p>      
      
        <input type="hidden" name="aff_key" value={data[0].aff_key} />
        <input type="hidden" name="source" value={data[0].source} />
@@ -76,8 +92,8 @@ export const Item = ({data}) => {
        <input type="hidden" name="pid" value={data[0].pid} />
        <input type="hidden" name="aid" value={data[0].aid} />
        <input type="hidden" name="cjsku" value={data[0].cjsku} />
-       <input type="hidden" name="url" value={data[0].url} />
-       <input type="submit" value={data[0].submitValue} className={styles.submitValue} />
+       <input type="hidden" name="url" value={data[0].url} />        
+       <input type="submit" value={data[0].submitValue} className={styles.submitValue} />        
       </div>
       <p className={styles.descuento}>%</p>
     </div>
@@ -90,16 +106,20 @@ export const Item = ({data}) => {
         <form className={styles.lead} onSubmit={handleSubmit} ref={form} >
           <input type="text" placeholder='Nombre' className={styles.input_nombre} name={nombre} onChange={(e)=>setNombre(e.target.value)} pattern='[\Da-zA-Z]{1,50}'/>                                                     
           <input type="email" placeholder='Correo' className={styles.input_email} name={email} onChange={introEmail} />                                              
-          <input type="submit" value="Registrarme" className={styles.input_submit}  />
+          <input type="submit" value="Registrarme" className={styles.input_submit} />
         </form>
         {msgInput === false ? <p className={styles.msgInput_lead}>"Ingresa email completo sin caracteres extraños"</p> : ""}
        </div> 
-
+       
+       <div className={styles.container_start}>
+        <i className="fas fa-star"><span className={styles.star_review}>{data[0].review}</span></i>
+       </div>
       <img src={data[0].imgSrcBaja} 
        width="1" 
        height="1" 
        border="0" />
 
     </>
+   
   )
 }

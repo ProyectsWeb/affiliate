@@ -47,7 +47,19 @@
 .form_item .table .tr .container_textos .pDescripcion {
   font-size: 1.7rem;
   line-height: 1.5;
-  margin-top: 1rem;
+  margin-top: 7rem;
+}
+.form_item .table .tr .container_textos .list_beneficios {
+  margin: 2.5rem 1rem;
+  list-style-type: none;
+}
+.form_item .table .tr .container_textos .list_beneficios .span_titulo {
+  color: rgba(0, 0, 0, 0.8823529412);
+  font-weight: 600;
+  margin-left: 1rem;
+}
+.form_item .table .tr .container_textos .list_beneficios .span_descripcion {
+  margin-top: 5rem;
 }
 .form_item .table .tr .container_textos .submitValue {
   width: 50%;
@@ -135,4 +147,16 @@
   text-align: center;
   color: red;
   padding-top: 2rem;
+}
+
+.container_start {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+.container_start .star_review {
+  color: #000;
+  font-size: 5rem;
+  margin-left: 1rem;
 }

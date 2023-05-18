@@ -5,8 +5,8 @@ import { Item } from '@/components/Item'
 import Pag404 from '@/components/Pag404'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import Script from 'next/script'
 
+ 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({data, id}) {
@@ -26,18 +26,19 @@ export default function Home({data, id}) {
         <meta property='og:image' content={`${data[0].imgSrc}` }/>        
        {/*  <link rel="icon" href="/favicon.ico" /> */}
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </Head>
+
       <div className={styles.encabezado}>
-        <Image src='/zavan-recomend.png' className={styles.logo} width={100} height={100} alt='Logo Zavan Recomend' />
+      
+        <Image src='/zavan-recomend.png' className={styles.logo} width={100} height={100} alt='Logo Zavan Recomend' />       
         <h1 className={styles.h1}>Recomendado</h1>
+      </div>      
+
+      <div className={styles.container}>     
+        {data.length >= 1 ? <Item data={data} /> : <Pag404 />}        
       </div>
       
-
-      <div className={styles.container}>
-        {data.length >= 1 ? <Item data={data} /> : <Pag404 />}
-        
-      </div>
-      <Script src="https://use.fontawesome.com/79d2d8e64e.js" />
     </>
   )
 }

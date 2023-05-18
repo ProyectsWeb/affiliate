@@ -80,6 +80,16 @@ const productSchema = new Schema({
         type: String,
         required: [true, 'imgSrcBaja requerido'],
         trim: true
+    },
+    beneficios: {
+        type: Array,  
+        required: [true, 'Beneficios requerido'],      
+        trim: true
+    },
+    review: {
+        type: Number,  
+        required: [true, 'Review requerido'],       
+        trim: true
     }    
 },{
     timestamps: true
