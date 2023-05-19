@@ -66,14 +66,14 @@ export const Item = ({data}) => {
        </div>
     
       <div className={styles.container_textos} >     
-       <p className={styles.pTitulo}><b>{data[0].pTitulo}</b></p>
+       <h1 className={styles.pTitulo}><b>{data[0].pTitulo}</b></h1>
 
-       <h3 className={styles.ventajas}>Ventajas y/o Beneficios:</h3>
+       <h4 className={styles.ventajas}>Ventajas y/o Beneficios:</h4>
       <ul>
         {
           beneficios.map((beneficio, index)=>{
             return <li key={index} className={styles.list_beneficios}>
-                      <i class="fa-solid fa-check"></i>                    
+                      <i className="fa-solid fa-check"></i>                    
                       <span className={styles.span_titulo}>{beneficio.subtitulo}</span>
                        <br></br>
                       <span className={styles.span_descripcion}>{beneficio.descBeneficio}</span>                     
@@ -82,7 +82,10 @@ export const Item = ({data}) => {
         }
       </ul>          
 
-      <p className={styles.pDescripcion}>{data[0].pDescripcion}</p>      
+      <p className={styles.pDescripcion}>
+      <b>Descripción:</b><br></br>
+        {data[0].pDescripcion}       
+      </p>      
      
        <input type="hidden" name="aff_key" value={data[0].aff_key} />
        <input type="hidden" name="source" value={data[0].source} />
@@ -93,9 +96,9 @@ export const Item = ({data}) => {
        <input type="hidden" name="aid" value={data[0].aid} />
        <input type="hidden" name="cjsku" value={data[0].cjsku} />
        <input type="hidden" name="url" value={data[0].url} />        
-       <input type="submit" value={data[0].submitValue} className={styles.submitValue} />        
+       <input type="submit" value={data[0].submitValue} className={styles.submitValue} />  
       </div>
-      <p className={styles.descuento}>%</p>
+      <p className={styles.descuento}>%</p>          
     </div>
     </div>
    

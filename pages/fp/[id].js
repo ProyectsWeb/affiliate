@@ -12,7 +12,8 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Home({data, id}) {
 
   const router = useRouter();
-  const myKeywords = data[0].alt.split(" ", 20);
+  const myKeywords = data[0].alt.split(", ", 20);
+  console.log(myKeywords);
   console.log(data);
   
   return (
@@ -26,7 +27,7 @@ export default function Home({data, id}) {
         <meta property='og:image' content={`${data[0].imgSrc}` }/>        
        {/*  <link rel="icon" href="/favicon.ico" /> */}
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     {/*   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> */}
       </Head>
 
       <div className={styles.encabezado}>

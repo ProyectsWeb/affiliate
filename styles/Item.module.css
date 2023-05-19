@@ -40,9 +40,14 @@
 }
 .form_item .table .tr .container_textos .pTitulo {
   font-size: 2.1rem;
+  font-size: 2.3rem;
+  margin-top: 2rem;
 }
 .form_item .table .tr .container_textos .ventajas {
-  margin-top: 3rem;
+  /*  margin-top: 3rem; */
+  margin-top: 7rem;
+  font-size: 1.65rem;
+  text-transform: uppercase;
 }
 .form_item .table .tr .container_textos .pDescripcion {
   font-size: 1.7rem;
