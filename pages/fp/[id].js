@@ -17,7 +17,7 @@ export default function Home({data, id}) {
   return (
     <>
       <Head>
-        <title>Zavan Recomd</title>
+        <title>ZavanLink</title>
         <meta name="keywords" content={`${myKeywords}`} />   
         <meta name="description" content={`${data[0].alt}`} />
         <meta name="author" content="Jorge Peraza - Zavanaf" />  
