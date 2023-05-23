@@ -24,7 +24,7 @@ export default function Home({data, id}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />        
         <meta property='og:image' content={`${data[0].imgSrc}` }/>        
        {/*  <link rel="icon" href="/favicon.ico" /> */}
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />    
+        <link rel="shortcut icon" type="image/x-icon" href="/zavan-link.ico" />    
       </Head>
 
       <div className={styles.encabezado}>
