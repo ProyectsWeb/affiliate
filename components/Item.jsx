@@ -11,7 +11,7 @@ export const Item = ({data}) => {
     const [ email, setEmail]= useState('');  
     const [msgInput, setMsgInput] = useState(false); 
     const beneficios = data[0].beneficios;
-    
+
 
   const introEmail = (e)=>{  
    setEmail(e.target.value)
