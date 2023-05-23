@@ -39,12 +39,10 @@
   }
 }
 .form_item .table .tr .container_textos .pTitulo {
-  font-size: 2.1rem;
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   margin-top: 2rem;
 }
 .form_item .table .tr .container_textos .ventajas {
-  /*  margin-top: 3rem; */
   margin-top: 7rem;
   font-size: 1.65rem;
   text-transform: uppercase;
@@ -65,6 +63,12 @@
 }
 .form_item .table .tr .container_textos .list_beneficios .span_descripcion {
   margin-top: 5rem;
+}
+.form_item .table .tr .container_textos .verprecio {
+  font-size: 1.9rem;
+  margin-top: 5rem;
+  margin: 6rem auto 0 0;
+  color: #032449;
 }
 .form_item .table .tr .container_textos .submitValue {
   width: 50%;

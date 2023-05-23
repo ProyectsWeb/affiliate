@@ -12,9 +12,7 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Home({data, id}) {
 
   const router = useRouter();
-  const myKeywords = data[0].alt.split(", ", 20);
-  console.log(myKeywords);
-  console.log(data);
+  const myKeywords = data[0].alt.split(", ", 20);  
   
   return (
     <>
@@ -26,14 +24,13 @@ export default function Home({data, id}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />        
         <meta property='og:image' content={`${data[0].imgSrc}` }/>        
        {/*  <link rel="icon" href="/favicon.ico" /> */}
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-     {/*   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> */}
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />    
       </Head>
 
       <div className={styles.encabezado}>
       
-        <Image src='/zavan-recomend.png' className={styles.logo} width={100} height={100} alt='Logo Zavan Recomend' />       
-        <h1 className={styles.h1}>Recomendado</h1>
+        <Image src='/zavan-link.png' className={styles.logo} width={100} height={100} alt='Logo Zavan Recomend' />       
+        <h1 className={styles.h1}>¡Descuento especial! ahora más barato que nunca</h1>
       </div>      
 
       <div className={styles.container}>     

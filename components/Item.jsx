@@ -66,9 +66,8 @@ export const Item = ({data}) => {
        </div>
     
       <div className={styles.container_textos} >     
-       <h1 className={styles.pTitulo}><b>{data[0].pTitulo}</b></h1>
-
-       <h4 className={styles.ventajas}>Ventajas y/o Beneficios:</h4>
+       <h2 className={styles.pTitulo}><b>{data[0].pTitulo}</b></h2>                      
+       <h4 className={styles.ventajas}>Ventajas / Beneficios:</h4>
       <ul>
         {
           beneficios.map((beneficio, index)=>{
@@ -95,7 +94,8 @@ export const Item = ({data}) => {
        <input type="hidden" name="pid" value={data[0].pid} />
        <input type="hidden" name="aid" value={data[0].aid} />
        <input type="hidden" name="cjsku" value={data[0].cjsku} />
-       <input type="hidden" name="url" value={data[0].url} />        
+       <input type="hidden" name="url" value={data[0].url} /> 
+       <p className={styles.verprecio}>Ver...</p>
        <input type="submit" value={data[0].submitValue} className={styles.submitValue} />  
       </div>
       <p className={styles.descuento}>%</p>          
